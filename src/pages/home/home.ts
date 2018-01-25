@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {DefaultTemplate} from '../../../model/default-template';
+import {DefaultChecklist} from "../../../model/default-checklist";
 
 @Component({
   selector: 'page-home',
@@ -7,8 +9,11 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  public defaultTemplate: DefaultTemplate;
+  public defaultChecklist: DefaultChecklist;
 
+  constructor(public navCtrl: NavController) {
+    this.defaultChecklist.createEmpty();
   }
 
 }

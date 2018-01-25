@@ -1,10 +1,13 @@
 <ion-header>
   <ion-navbar >
-    <ion-title >Home</ion-title>
+    <ion-title >{{defaultChecklist.name}}</ion-title>
     <ion-icon name="settings" style="float:right;"></ion-icon>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-searchbar placeholder="Search" spellcheck="true" ></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let defaultChecklistStroke of defaultChecklist.list">{{defaultChecklistStroke.name}}</ion-item>
+  </ion-list>
 </ion-content>
